@@ -2,7 +2,7 @@
 
 import os, sys
 
-rootpath = "D:\AVM"
+rootpath = "D:\Adult-Video-Manage-System"
 catedir = os.listdir( rootpath )
 
 for avs in catedir:
