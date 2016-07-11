@@ -2,8 +2,8 @@
 
 import os, sys
 
-rootpath = "D:\Adult-Video-Manage-System"
+rootpath = input("请输入目录：")
 catedir = os.listdir( rootpath )
 
 for avs in catedir:
-   print (avs)
+    print (avs)
