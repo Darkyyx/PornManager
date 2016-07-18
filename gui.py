@@ -1,13 +1,38 @@
 # -*- coding: utf-8 -*-
 
-import tkinter as tk
+# import tkinter as tk
 
 
-class Application(tk.Frame):
+# class Application(tk.Frame):
+#     def __init__(self, master=None):
+#         tk.Frame.__init__(self, master)
+#         self.pack()
+
+# root = tk.Tk()
+# app = Application(master=root)
+# app.mainloop()
+
+from tkinter import *
+import tkinter.messagebox as messagebox
+
+class Application(Frame):
     def __init__(self, master=None):
-        tk.Frame.__init__(self, master)
+        Frame.__init__(self, master)
         self.pack()
+        self.createWidgets()
 
-root = tk.Tk()
-app = Application(master=root)
+    def createWidgets(self):
+        self.nameInput = Entry(self)
+        self.nameInput.pack()
+        self.alertButton = Button(self, text='Hello', command=self.hello)
+        self.alertButton.pack()
+
+    def hello(self):
+        name = self.nameInput.get() or 'world'
+        messagebox.showinfo('Message', 'Hello, %s' % name)
+
+app = Application()
+# 设置窗口标题:
+app.master.title('Hello World')
+# 主消息循环:
 app.mainloop()

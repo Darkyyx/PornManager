@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import os, sys
+import os
+import sys
 
 rootpath = input("请输入目录：")
-catedir = os.listdir( rootpath )
+catedir = os.listdir(rootpath)
 
 for avs in catedir:
-    print (avs)
+    print(avs)
