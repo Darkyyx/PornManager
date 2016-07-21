@@ -9,8 +9,8 @@ import struct
 
 def typeList():
     return {
-        "52617221": EXT_RAR,
-        "504B0304": EXT_ZIP}
+        "52617221": "EXT_RAR",
+        "504B0304": "EXT_ZIP"}
 
 # 字节码转16进制字符串
 
@@ -45,4 +45,5 @@ def filetype(filename):
     return ftype
 
 if __name__ == '__main__':
-    print filetype(Your-file-path)
+    check_file = input("输入文件绝对路径：")
+    print(filetype(check_file))
